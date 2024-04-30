@@ -16,5 +16,9 @@ jobs:
     steps:
     - name: checkout code
       uses: actions/checkout@v4
+      
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag final_project_devops:${{ github.run_number }}-${{ github.sha }}
+      run: docker build . --file Dockerfile --tag liordaniel/final_project_devops:${{ github.run_number }}-${{ github.sha }}
+      
+    - name: push docker image to registry
+      run: docker push liordaniel/final_project_devops:${{ github.run_number }}-${{ github.sha }}
