@@ -1,3 +1,3 @@
 #!/bin/bash
-docker stop lior-sagi-proj
-docker rm lior-sagi-proj
+docker stop lior-sagi
+docker rm lior-sagi
